@@ -23,13 +23,13 @@ public class SaveCommand {
     public static void SaveCommand(JTextArea area) {
         FileReminder fileReminder = FileReminder.getSingleton();
 		String fileName = fileReminder.getFileName();
-		File file = new File( fileName );
 
 		if( fileName == null ) {
 			SaveasCommand sc = new SaveasCommand();
 			sc.SaveasCommand( area );
 		} else {
             try {
+				File file = new File( fileName );
                 if(!checkWritefile(file)) {
                     filealert("ファイルに書き込めません");
                     
