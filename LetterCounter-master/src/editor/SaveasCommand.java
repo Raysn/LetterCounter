@@ -1,4 +1,4 @@
-package editer;
+package editor;
 
 import javax.swing.JFileChooser;
 import javax.swing.JTextArea;
